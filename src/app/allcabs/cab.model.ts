@@ -1,6 +1,6 @@
 export interface Cab {
-    id: number;
+    cabId: number;
     typeOfCab: string;
-    fare: number;
+    rate: number;
   }
   

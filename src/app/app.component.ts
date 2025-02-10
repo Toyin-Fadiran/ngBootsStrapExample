@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { AllcabsComponent } from "./allcabs/allcabs.component";
+import { CabService } from './cab.service';
+import { HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, AllcabsComponent,RouterLink, RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'phase3app';
+
+  constructor( private cabService: CabService){}
 }

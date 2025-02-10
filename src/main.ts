@@ -6,11 +6,13 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http'; // Import provideHttpClient
 import routeConfig from './app/routes'; // Adjust path as necessary
 import { appConfig } from './app/app.config';
+import { AllcabsComponent } from './app/allcabs/allcabs.component';
 
-bootstrapApplication(AppComponent, {
+bootstrapApplication(AllcabsComponent, {
   providers: [
-    provideRouter(routeConfig), // Add routing configuration
+    //provideHttpClient(),
+    //provideRouter(routeConfig), // Add routing configuration
     ...appConfig.providers,     // Use existing providers from appConfig
-    provideHttpClient(withFetch())         // Provide HttpClient here
+         // Provide HttpClient here
   ]
 }).catch(err => console.error(err));

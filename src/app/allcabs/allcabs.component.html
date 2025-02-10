@@ -10,14 +10,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		@for (cab of Cabs; track cab.id; let i = $index) {
+		@for (cab of Cabs; track cab.cabId; let i = $index) {
 			<tr>
 				<th scope="row">{{ i + 1 }}</th>
 				<td>
-					{{ cab.id }}
+					{{ cab.cabId }}
 				</td>
 				<td>{{ cab.typeOfCab | number }}</td>
-				<td>{{ cab.fare | number }}</td>
+				<td>{{ cab.rate | number }}</td>
 			</tr>
 		}
 	</tbody>
